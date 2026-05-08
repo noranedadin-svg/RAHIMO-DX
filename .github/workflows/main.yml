@@ -20,4 +20,4 @@ jobs:
           context: .
           push: true
           # تم تغيير الاسم هنا ليطابق حسابك الجديد
-          tags: rahimodx/rahimo-vip:latest
+          tags: rahimodx/rahim-vip:latest
