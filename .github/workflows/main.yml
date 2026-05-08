@@ -5,14 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
+          # تأكد أن اسم الـ Secret في GitHub هو DOCKERHUB_USERNAME
           username: ${{ secrets.DOCKERHUB_USERNAME }}
+          # تأكد أن اسم الـ Secret في GitHub هو DOCKERHUB_TOKEN
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: rahimodx/rahim-vip:latest
+          # تم تغيير الاسم هنا ليطابق حسابك الجديد
+          tags: rahimodx/rahimo-vip:latest
