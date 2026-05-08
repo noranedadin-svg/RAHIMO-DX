@@ -1,4 +1,4 @@
-name: Build Rahimo DX Image
+name: Build Rahim DX Image
 on: [push]
 jobs:
   build:
@@ -16,4 +16,3 @@ jobs:
           context: .
           push: true
           tags: rahimodx/rahim-vless-vip:latest
-          
